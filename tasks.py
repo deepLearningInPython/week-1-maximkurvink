@@ -68,6 +68,4 @@ def neural_net_layer(two_dim, one_dim):
     output = ReLu(mult_matrix)
     return output
 
-
-
 # ------------------------------------------
