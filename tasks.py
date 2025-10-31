@@ -1,4 +1,4 @@
-import numpy
+import numpy as np
 
 # Follow the tasks below to practice basic Python concepts.
 # Write your code in between the dashed lines.
@@ -13,7 +13,14 @@ import numpy
 # Your code here:
 # -----------------------------------------------
 
-def step
+def step(num):
+    if type(num) == int or type(num) == float:
+        if num > 0:
+            return 1
+        else:
+            return -1
+    else:
+        return "Input should be numeric"
 
 
 # -----------------------------------------------
@@ -28,8 +35,14 @@ def step
 
 # Your code here:
 # -----------------------------------------------
-def ReLu
+def ReLu(numpy_array, cutoff=0):
+    for i in range(len(numpy_array)):
+        if numpy_array[i] < cutoff:
+            numpy_array[i] = cutoff
+    return numpy_array
 
+a = np.array([1, 2, 3, -1, -4, 0, -5, 3, 8])
+ReLu(a)
 
 # -----------------------------------------------
 
@@ -44,7 +57,17 @@ def ReLu
 # Your code here:
 # -----------------------------------------------
 
-def neural_net_layer
+def neural_net_layer(two_dim, one_dim):
+    mult_matrix = two_dim @ one_dim
+
+    def ReLu(numpy_array, cutoff=0):
+        for i in range(len(numpy_array)):
+            if numpy_array[i] < cutoff:
+                numpy_array[i] = cutoff
+        return numpy_array
+    output = ReLu(mult_matrix)
+    return output
+
 
 
 # ------------------------------------------
